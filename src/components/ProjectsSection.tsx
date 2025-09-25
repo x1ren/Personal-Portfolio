@@ -12,7 +12,7 @@ const ProjectsSection = () => {
       description: "A comprehensive diabetes management application that combines a modern React Native frontend with a powerful AI-powered backend. The app helps users manage diabetes through personalized, real-time insights using Continuous Glucose Monitor (CGM) data, advanced LSTM machine learning models, and an intelligent chat assistant that provides 24/7 support for diabetes management.",
       image: project1,
       technologies: ["React-Native", "Flask", "GeminiAI", "RAG Systems"],
-      github: "#",
+      github: "https://github.com/x1ren/BuhAI",
       
     },
     {
@@ -20,7 +20,7 @@ const ProjectsSection = () => {
       description: "An AI-powered recipe assistant that helps users explore,generate, and customize meals based on their available ingredients, personal taste preferences, and dietary restrictions. The app provideS step-by-step cooking instructions. It enhances the cooking experience by offering personalized meal planning, reducing food waste through ingredient-based suggestions, and keeping users inspired with new recipe ideas.",
       image: project2,
       technologies: ["React-Native", "Spring Boot", "NoSQL", "GeminiAI"],
-      github: "#",
+      github: "https://github.com/x1ren/Divina-Frontend",
       
     },
     {
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
       description: "A web application that highlights and visualizes recent data related to the United Nations Sustainable Development Goals (SDGs) in the Philippines. The platform features interactive graphs and data-driven insights to make sustainability progress easier to understand. It also integrates the latest news and updates on SDG-related initiatives within the country, helping users stay informed and engaged with global development efforts.",
       image: project3,
       technologies: ["Flask", "JavaScript", "HTML&CSS", "Render"],
-      github: "#",
+      github: "https://github.com/x1ren/SDG-Philippines-Web-Application",
     
     }
   ];
@@ -74,6 +74,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className="flex gap-4">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Button 
                     variant="outline" 
                     size="lg" 
@@ -82,13 +83,8 @@ const ProjectsSection = () => {
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
-                  <Button 
-                    size="lg" 
-                    className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 shadow-modern font-medium"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </Button>
+                  </a>
+                  
                 </div>
               </div>
             </div>

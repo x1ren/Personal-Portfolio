@@ -66,6 +66,7 @@ const HeroSection = () => {
                 </a>
 
                 <div className="flex gap-3">
+                  <a href="https://github.com/x1ren">
                   <Button
                     size="lg"
                     variant="outline"
@@ -73,6 +74,8 @@ const HeroSection = () => {
                   >
                     <Github className="w-5 h-5 group-hover:text-primary transition-colors" />
                   </Button>
+                  </a>
+                  <a href="https://www.linkedin.com/in/iben-anoos-53a3a1361/">
                   <Button
                     size="lg"
                     variant="outline"
@@ -80,6 +83,8 @@ const HeroSection = () => {
                   >
                     <Linkedin className="w-5 h-5 group-hover:text-primary transition-colors" />
                   </Button>
+                  </a>
+                  <a href="mailto:iben.anoos@gmail.com">
                   <Button
                     size="lg"
                     variant="outline"
@@ -87,6 +92,7 @@ const HeroSection = () => {
                   >
                     <Mail className="w-5 h-5 group-hover:text-primary transition-colors" />
                   </Button>
+                  </a>
                 </div>
               </div>
             </div>
