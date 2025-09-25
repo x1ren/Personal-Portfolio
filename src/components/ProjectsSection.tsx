@@ -1,35 +1,35 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import project1 from "@/assets/project-placeholder-1.jpg";
-import project2 from "@/assets/project-placeholder-2.jpg";
-import project3 from "@/assets/project-placeholder-3.jpg";
+import project1 from "@/assets/buhay.png";
+import project2 from "@/assets/recipe.png";
+import project3 from "@/assets/sdg1.png";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+      title: "BuhAI-AI Diabetes Assistant",
+      description: "A comprehensive diabetes management application that combines a modern React Native frontend with a powerful AI-powered backend. The app helps users manage diabetes through personalized, real-time insights using Continuous Glucose Monitor (CGM) data, advanced LSTM machine learning models, and an intelligent chat assistant that provides 24/7 support for diabetes management.",
       image: project1,
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["React-Native", "Flask", "GeminiAI", "RAG Systems"],
       github: "#",
-      live: "#"
+      
     },
     {
-      title: "Task Management App",
-      description: "Modern task management application with real-time collaboration features. Built using React, TypeScript, and Firebase for seamless user experience.",
+      title: "Divina - AI Recipe App",
+      description: "An AI-powered recipe assistant that helps users explore,generate, and customize meals based on their available ingredients, personal taste preferences, and dietary restrictions. The app provideS step-by-step cooking instructions. It enhances the cooking experience by offering personalized meal planning, reducing food waste through ingredient-based suggestions, and keeping users inspired with new recipe ideas.",
       image: project2,
-      technologies: ["React", "TypeScript", "Firebase", "Tailwind"],
+      technologies: ["React-Native", "Spring Boot", "NoSQL", "GeminiAI"],
       github: "#",
-      live: "#"
+      
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website showcasing modern web development techniques. Features smooth animations and optimized performance.",
+      title: "SDG Philippines Web App",
+      description: "A web application that highlights and visualizes recent data related to the United Nations Sustainable Development Goals (SDGs) in the Philippines. The platform features interactive graphs and data-driven insights to make sustainability progress easier to understand. It also integrates the latest news and updates on SDG-related initiatives within the country, helping users stay informed and engaged with global development efforts.",
       image: project3,
-      technologies: ["React", "Vite", "Tailwind", "Framer Motion"],
+      technologies: ["Flask", "JavaScript", "HTML&CSS", "Render"],
       github: "#",
-      live: "#"
+    
     }
   ];
 

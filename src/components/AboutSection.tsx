@@ -26,10 +26,10 @@ const AboutSection = () => {
   ];
 
   const stats = [
-    { number: "19", label: "Years Old" },
-    { number: "2+", label: "Years Coding" },
-    { number: "15+", label: "Projects Completed" },
-    { number: "5+", label: "Technologies Mastered" }
+    { number: "207", label: "Commits (2025)" },
+    { number: "6+", label: "Projects Completed" },
+    { number: "5+", label: "Technologies Mastered" },
+    {number: "<2", label: "Years of Experience" }
   ];
 
   return (
@@ -51,22 +51,15 @@ const AboutSection = () => {
             </h3>
             <div className="space-y-6 text-muted-foreground leading-relaxed text-lg font-light">
               <p>
-                I'm a passionate 19-year-old software developer with a love for creating 
-                innovative digital solutions. My journey in programming started during my 
-                high school years, and since then, I've been dedicated to continuously 
-                learning and improving my skills.
+               I'm a 19-year-old software developer with a strong focus on backend development and building efficient, reliable systems. My programming journey started in high school, and since then, I’ve been steadily 
+                learning and improving my skills through projects and hands-on practice.
               </p>
               <p>
-                I specialize in full-stack web development, with a particular interest in 
-                modern JavaScript frameworks and creating seamless user experiences. 
-                I enjoy tackling complex problems and turning ideas into reality through code.
+               I specialize in full-stack web development. While I enjoy designing APIs, managing data, and ensuring smooth backend processes, I also work with frontend technologies to create functional and user-friendly interfaces. 
+               This balance allows me to see projects 
+               from end to end and bring ideas fully to life.
               </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge with the 
-                developer community. I believe in the power of collaboration and 
-                continuous learning.
-              </p>
+             
             </div>
           </div>
 
