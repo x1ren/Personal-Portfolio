@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        /* Custom Portfolio Colors */
+        "hero-accent": "hsl(var(--hero-accent))",
+        "hero-muted": "hsl(var(--hero-muted))",
+        "geometric-light": "hsl(var(--geometric-light))",
+        "geometric-lighter": "hsl(var(--geometric-lighter))",
+        "nav-hover": "hsl(var(--nav-hover))",
+        "section-bg": "hsl(var(--section-bg))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
