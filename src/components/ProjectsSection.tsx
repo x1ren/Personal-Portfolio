@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import project1 from "@/assets/project-placeholder-1.jpg";
@@ -34,13 +34,13 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen py-20 bg-gradient-section">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
+    <section id="projects" className="min-h-screen py-32 bg-gradient-section">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-black text-primary mb-6 tracking-tight">
             Featured Projects
           </h2>
-          <p className="text-hero-muted text-lg max-w-2xl mx-auto">
+          <p className="text-hero-muted text-xl max-w-3xl mx-auto font-light leading-relaxed">
             A collection of projects that showcase my skills in modern web development,
             from concept to deployment.
           </p>
@@ -48,50 +48,50 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-card border-border hover:border-geometric-light transition-all duration-300 shadow-glow group">
-              <div className="aspect-video overflow-hidden rounded-t-lg">
+            <div key={index} className="modern-card rounded-2xl overflow-hidden group">
+              <div className="aspect-video overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <CardHeader>
-                <CardTitle className="text-primary">{project.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-primary mb-3 group-hover:text-gradient transition-all duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed font-light">
                   {project.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full"
+                      className="px-4 py-2 text-sm bg-secondary/50 text-secondary-foreground rounded-lg border border-border font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+                <div className="flex gap-4">
                   <Button 
                     variant="outline" 
-                    size="sm" 
-                    className="flex-1 border-geometric-light hover:border-primary hover:bg-primary/10"
+                    size="lg" 
+                    className="flex-1 border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 font-medium"
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
                   <Button 
-                    size="sm" 
-                    className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                    size="lg" 
+                    className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 shadow-modern font-medium"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

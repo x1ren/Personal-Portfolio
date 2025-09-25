@@ -4,67 +4,71 @@ import profilePlaceholder from "@/assets/profile-placeholder.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-radial relative overflow-hidden">
-      {/* Geometric decorations */}
-      <div className="geometric-decoration"></div>
-      <div className="geometric-decoration"></div>
-      <div className="geometric-decoration"></div>
+    <section id="home" className="min-h-screen flex items-center bg-gradient-hero relative overflow-hidden">
+      {/* Modern floating elements */}
+      <div className="floating-element"></div>
+      <div className="floating-element"></div>
+      <div className="floating-element"></div>
       
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-8 py-32">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div className="space-y-8">
-            <div className="text-hero-muted font-mono text-lg">
+          <div className="space-y-10">
+            <div className="text-hero-muted font-mono text-lg tracking-wide">
               $ whoami
             </div>
             
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold text-primary text-shadow-glow">
+            <div className="space-y-6">
+              <h1 className="text-6xl lg:text-8xl font-black text-primary leading-none tracking-tight">
                 Hello I'm
               </h1>
-              <h2 className="text-4xl lg:text-6xl font-bold text-hero-accent">
+              <h2 className="text-5xl lg:text-7xl font-black text-gradient leading-none tracking-tight">
                 Iben Anoos
               </h2>
+              <p className="text-xl text-hero-muted font-medium">
+                19 years old • Software Developer
+              </p>
             </div>
             
-            <div className="text-hero-muted text-lg leading-relaxed max-w-2xl">
-              <span className="text-geometric-lighter">&gt;</span> I develop modern web applications and innovative 
+            <div className="text-hero-muted text-xl leading-relaxed max-w-2xl font-light">
+              <span className="text-hero-accent font-medium">&gt;</span> I develop modern web applications and innovative 
               software solutions. Specializing in full-stack 
               development, I'm passionate about creating 
               efficient, scalable applications and sharing knowledge 
               through collaborative development.
             </div>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-6 pt-4">
               <Button 
+                size="lg"
                 variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium px-8"
               >
-                <Download className="w-4 h-4 mr-2" />
+                <Download className="w-5 h-5 mr-3" />
                 Download CV
               </Button>
               
-              <div className="flex gap-3">
+              <div className="flex gap-4">
                 <Button 
-                  size="icon" 
+                  size="lg" 
                   variant="outline"
-                  className="border-geometric-light hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                  className="border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 p-3"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-6 h-6" />
                 </Button>
                 <Button 
-                  size="icon" 
+                  size="lg" 
                   variant="outline"
-                  className="border-geometric-light hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                  className="border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 p-3"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-6 h-6" />
                 </Button>
                 <Button 
-                  size="icon" 
+                  size="lg" 
                   variant="outline"
-                  className="border-geometric-light hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                  className="border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 p-3"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-6 h-6" />
                 </Button>
               </div>
             </div>
@@ -73,7 +77,7 @@ const HeroSection = () => {
           {/* Right content - Profile image */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-geometric-light shadow-glow">
+              <div className="w-96 h-96 rounded-3xl overflow-hidden shadow-modern border border-border/20">
                 <img 
                   src={profilePlaceholder} 
                   alt="Iben Anoos - Software Developer"
@@ -81,18 +85,18 @@ const HeroSection = () => {
                 />
               </div>
               
-              {/* Floating decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 border-2 border-geometric-lighter rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-8 -left-8 w-16 h-16 border-2 border-geometric-light rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+              {/* Modern decorative elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-glass rounded-2xl animate-pulse shadow-glass"></div>
+              <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-glass rounded-2xl animate-pulse shadow-glass" style={{ animationDelay: "1s" }}></div>
             </div>
           </div>
         </div>
         
         {/* Terminal status indicator */}
-        <div className="absolute bottom-8 left-6 font-mono text-sm text-hero-muted">
-          <span className="text-geometric-lighter">iben@portfolio:~$</span>
-          <span className="ml-4">Status: <span className="text-primary">AVAILABLE</span></span>
-          <span className="ml-8">Time: {new Date().toLocaleTimeString()}</span>
+        <div className="absolute bottom-10 left-8 font-mono text-sm text-hero-muted">
+          <span className="text-hero-accent">iben@portfolio:~$</span>
+          <span className="ml-4">Status: <span className="text-primary font-medium">AVAILABLE</span></span>
+          <span className="ml-8">Time: <span className="font-medium">{new Date().toLocaleTimeString()}</span></span>
         </div>
       </div>
     </section>

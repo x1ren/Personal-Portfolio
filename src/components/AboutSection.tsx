@@ -33,23 +33,23 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="min-h-screen py-20 bg-gradient-section">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
+    <section id="about" className="min-h-screen py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-black text-primary mb-6 tracking-tight">
             About Me
           </h2>
-          <p className="text-hero-muted text-lg max-w-2xl mx-auto">
+          <p className="text-hero-muted text-xl max-w-3xl mx-auto font-light leading-relaxed">
             Learn more about my journey, values, and what drives my passion for software development.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-primary">
+        <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+          <div className="space-y-8">
+            <h3 className="text-4xl font-black text-gradient tracking-tight">
               Hi, I'm Iben Anoos
             </h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-muted-foreground leading-relaxed text-lg font-light">
               <p>
                 I'm a passionate 19-year-old software developer with a love for creating 
                 innovative digital solutions. My journey in programming started during my 
@@ -72,37 +72,33 @@ const AboutSection = () => {
 
           <div className="grid grid-cols-2 gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-card border-border text-center hover:border-geometric-light transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="text-muted-foreground">{stat.label}</div>
-                </CardContent>
-              </Card>
+              <div key={index} className="glass-card rounded-2xl p-8 text-center hover:shadow-modern transition-all duration-300">
+                <div className="text-4xl font-black text-gradient mb-3">{stat.number}</div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
+              </div>
             ))}
           </div>
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold text-primary text-center mb-12">
+          <h3 className="text-4xl font-black text-primary text-center mb-16 tracking-tight">
             My Core Values
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <Card key={index} className="bg-card border-border hover:border-geometric-light transition-all duration-300 group">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-3 bg-secondary rounded-full w-fit group-hover:bg-primary/10 transition-colors">
-                      <IconComponent className="w-6 h-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-primary">{value.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground text-center text-sm">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div key={index} className="modern-card rounded-2xl p-8 text-center group">
+                  <div className="mx-auto mb-6 p-4 bg-gradient-glass rounded-2xl w-fit group-hover:shadow-glow transition-all duration-300">
+                    <IconComponent className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-gradient transition-all duration-300">
+                    {value.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    {value.description}
+                  </p>
+                </div>
               );
             })}
           </div>

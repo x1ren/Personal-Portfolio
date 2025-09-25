@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'sans': ['Inter', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -50,10 +54,11 @@ export default {
         /* Custom Portfolio Colors */
         "hero-accent": "hsl(var(--hero-accent))",
         "hero-muted": "hsl(var(--hero-muted))",
-        "geometric-light": "hsl(var(--geometric-light))",
-        "geometric-lighter": "hsl(var(--geometric-lighter))",
+        "glass-bg": "hsl(var(--glass-bg))",
+        "glass-border": "hsl(var(--glass-border))",
         "nav-hover": "hsl(var(--nav-hover))",
         "section-bg": "hsl(var(--section-bg))",
+        "accent-glow": "hsl(var(--accent-glow))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
