@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       title: "Divina - AI Recipe App",
       description: "An AI-powered recipe assistant that helps users explore,generate, and customize meals based on their available ingredients, personal taste preferences, and dietary restrictions. The app provideS step-by-step cooking instructions. It enhances the cooking experience by offering personalized meal planning, reducing food waste through ingredient-based suggestions, and keeping users inspired with new recipe ideas.",
       image: project2,
-      technologies: ["React-Native", "Spring Boot", "NoSQL", "GeminiAI"],
+      technologies: ["React-Native", "Spring Boot", "PostreSQL", "GeminiAI"],
       github: "https://github.com/x1ren/Divina-Frontend",
       
     },

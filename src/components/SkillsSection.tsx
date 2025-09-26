@@ -28,7 +28,7 @@ const getIconStyle = (name: string) => {
     Flask: { color: "#000000", bg: "#00000020" },
     "Next.js": { color: "#000000", bg: "#00000020" },
     "React Native": { color: "#61DAFB", bg: "#61DAFB20" },
-    NoSQL: { color: "#4DB33D", bg: "#4DB33D20" },
+    PostgreSQL: { color: "#336791", bg: "#33679120" },
     Docker: { color: "#2496ED", bg: "#2496ED20" },
     GitHub: { color: "#181717", bg: "#18171720" },
   };
@@ -49,7 +49,7 @@ const SkillsSection = () => {
       { name: "Flask", icon: FlaskConical },
       { name: "Next.js", icon: LayoutTemplate },
       { name: "React Native", icon: Smartphone },
-      { name: "NoSQL", icon: DatabaseBackup },
+      { name: "PostgreSQL", icon: Database },
       { name: "Docker", icon: Container },
       { name: "GitHub", icon: Github },
     ],
