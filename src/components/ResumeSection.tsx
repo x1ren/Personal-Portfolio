@@ -19,7 +19,7 @@ const ResumeSection = () => {
       role: "Freelance Full-Stack Developer",
       company: "BrandingHeaven",
       location: "Remote",
-      period: "3-month freelance contract",
+      period: "Freelance (2025)",
       description:
         "Developed a complete web experience using Next.js and Three.js, including secure user authentication and Stripe-powered payments from end to end.",
       technologies: ["Next.js", "Three.js", "Stripe", "User Authentication"],
