@@ -9,8 +9,6 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center bg-gradient-hero relative overflow-hidden"
     >
-     
-
       <div className="max-w-7xl mx-auto px-8 py-32 relative">
         {/* Grid Pattern Overlay */}
         <div className="absolute inset-0 grid grid-cols-12 gap-4 opacity-5 pointer-events-none">
@@ -26,14 +24,11 @@ const HeroSection = () => {
           {/* Left content - spans 7 columns */}
           <div className="lg:col-span-7 space-y-12 relative">
             {/* Terminal Header */}
-            
 
             {/* Main Text Content */}
             <div className="glass-card rounded-b-xl rounded-tr-xl p-8 border border-border/20 space-y-8 backdrop-blur-md">
               <div className="space-y-3">
-                <div className="text-hero-muted font-mono text-sm">
-                  
-                </div>
+                <div className="text-hero-muted font-mono text-sm"></div>
                 <div className="font-mono typing-animation">
                   <h1 className="text-5xl lg:text-6xl font-black text-primary leading-tight tracking-tighter">
                     Iben<span className="text-hero-accent"> </span>Anoos
@@ -47,51 +42,51 @@ const HeroSection = () => {
               </div>
 
               <div className="border-l-2 border-hero-accent pl-4 text-hero-muted text-lg leading-relaxed">
-                <span className="text-hero-accent"></span>Passionate and hardworking developer, aspiring to become a seasoned professional. Focused on modern web and app development, crafting
-                 digital experiences through elegant 
-                 code and building efficient, 
-                 scalable solutions.
-                solutions.
+                <span className="text-hero-accent"></span>Passionate and
+                hardworking developer, aspiring to become a seasoned
+                professional. Focused on modern web and app development,
+                crafting digital experiences through elegant code and building
+                efficient, scalable solutions. solutions.
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <a download={true} href="/Iben Anoos CV.pdf">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-8 rounded-xl shadow-glow transition-all duration-300"
-                >
-                  <Download className="w-5 h-5 mr-3" />
-                  Download CV
-                </Button>
+                <a download={true} href="/IbenAnoos CV.pdf">
+                  <Button
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-8 rounded-xl shadow-glow transition-all duration-300"
+                  >
+                    <Download className="w-5 h-5 mr-3" />
+                    Download CV
+                  </Button>
                 </a>
 
                 <div className="flex gap-3">
                   <a href="https://github.com/x1ren">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="rounded-xl border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
-                  >
-                    <Github className="w-5 h-5 group-hover:text-primary transition-colors" />
-                  </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="rounded-xl border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
+                    >
+                      <Github className="w-5 h-5 group-hover:text-primary transition-colors" />
+                    </Button>
                   </a>
                   <a href="https://www.linkedin.com/in/iben-anoos-53a3a1361/">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="rounded-xl border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
-                  >
-                    <Linkedin className="w-5 h-5 group-hover:text-primary transition-colors" />
-                  </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="rounded-xl border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
+                    >
+                      <Linkedin className="w-5 h-5 group-hover:text-primary transition-colors" />
+                    </Button>
                   </a>
                   <a href="mailto:iben.anoos@gmail.com">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="rounded-xl border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
-                  >
-                    <Mail className="w-5 h-5 group-hover:text-primary transition-colors" />
-                  </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="rounded-xl border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
+                    >
+                      <Mail className="w-5 h-5 group-hover:text-primary transition-colors" />
+                    </Button>
                   </a>
                 </div>
               </div>
@@ -123,7 +118,6 @@ const HeroSection = () => {
                         Available
                       </div>
                     </div>
-                  
                   </div>
                 </div>
               </div>
@@ -137,8 +131,6 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
-       
       </div>
     </section>
   );

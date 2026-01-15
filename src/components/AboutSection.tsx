@@ -6,30 +6,34 @@ const AboutSection = () => {
     {
       icon: Code2,
       title: "Clean Code",
-      description: "I believe in writing clean, maintainable code that stands the test of time and scales with business needs."
+      description:
+        "I believe in writing clean, maintainable code that stands the test of time and scales with business needs.",
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Always exploring new technologies and methodologies to solve problems in creative and efficient ways."
+      description:
+        "Always exploring new technologies and methodologies to solve problems in creative and efficient ways.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "Strong advocate for teamwork and open communication to achieve the best possible outcomes."
+      description:
+        "Strong advocate for teamwork and open communication to achieve the best possible outcomes.",
     },
     {
       icon: Target,
       title: "Results-Driven",
-      description: "Focused on delivering high-quality solutions that meet user needs and business objectives."
-    }
+      description:
+        "Focused on delivering high-quality solutions that meet user needs and business objectives.",
+    },
   ];
 
   const stats = [
-    { number: "207", label: "Commits (2025)" },
+    { number: "325", label: "Commits (2025)" },
     { number: "6+", label: "Projects Completed" },
     { number: "5+", label: "Technologies Mastered" },
-    {number: "<2", label: "Years of Experience" }
+    { number: "<2", label: "Years of Experience" },
   ];
 
   return (
@@ -40,7 +44,8 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-hero-muted text-xl max-w-3xl mx-auto font-light leading-relaxed">
-            Learn more about my journey, values, and what drives my passion for software development.
+            Learn more about my journey, values, and what drives my passion for
+            software development.
           </p>
         </div>
 
@@ -51,23 +56,34 @@ const AboutSection = () => {
             </h3>
             <div className="space-y-6 text-muted-foreground leading-relaxed text-lg font-light">
               <p>
-               I'm a 19-year-old software developer with a strong focus on backend development and building efficient, reliable systems. My programming journey started in high school, and since then, I’ve been steadily 
-                learning and improving my skills through projects and hands-on practice.
+                I'm a 19-year-old software developer with a strong focus on
+                backend development and building efficient, reliable systems. My
+                programming journey started in high school, and since then, I’ve
+                been steadily learning and improving my skills through projects
+                and hands-on practice.
               </p>
               <p>
-               I specialize in full-stack web development. While I enjoy designing APIs, managing data, and ensuring smooth backend processes, I also work with frontend technologies to create functional and user-friendly interfaces. 
-               This balance allows me to see projects 
-               from end to end and bring ideas fully to life.
+                I specialize in full-stack web development. While I enjoy
+                designing APIs, managing data, and ensuring smooth backend
+                processes, I also work with frontend technologies to create
+                functional and user-friendly interfaces. This balance allows me
+                to see projects from end to end and bring ideas fully to life.
               </p>
-             
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="glass-card rounded-2xl p-8 text-center hover:shadow-modern transition-all duration-300">
-                <div className="text-4xl font-black text-gradient mb-3">{stat.number}</div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
+              <div
+                key={index}
+                className="glass-card rounded-2xl p-8 text-center hover:shadow-modern transition-all duration-300"
+              >
+                <div className="text-4xl font-black text-gradient mb-3">
+                  {stat.number}
+                </div>
+                <div className="text-muted-foreground font-medium">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -81,7 +97,10 @@ const AboutSection = () => {
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <div key={index} className="modern-card rounded-2xl p-8 text-center group">
+                <div
+                  key={index}
+                  className="modern-card rounded-2xl p-8 text-center group"
+                >
                   <div className="mx-auto mb-6 p-4 bg-gradient-glass rounded-2xl w-fit group-hover:shadow-glow transition-all duration-300">
                     <IconComponent className="w-8 h-8 text-primary" />
                   </div>

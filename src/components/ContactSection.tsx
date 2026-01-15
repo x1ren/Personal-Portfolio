@@ -13,7 +13,7 @@ import {
   Linkedin,
   CheckCircle,
   X,
-  AlertCircle
+  AlertCircle,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -28,8 +28,8 @@ const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [popup, setPopup] = useState({
     show: false,
-    type: 'success', // 'success' or 'error'
-    message: ''
+    type: "success", // 'success' or 'error'
+    message: "",
   });
 
   // Function to show popup
@@ -37,26 +37,26 @@ const ContactSection = () => {
     setPopup({
       show: true,
       type,
-      message
+      message,
     });
     // Auto hide after 5 seconds
     setTimeout(() => {
-      setPopup({ show: false, type: 'success', message: '' });
+      setPopup({ show: false, type: "success", message: "" });
     }, 5000);
   };
 
   // Function to hide popup
   const hidePopup = () => {
-    setPopup({ show: false, type: 'success', message: '' });
+    setPopup({ show: false, type: "success", message: "" });
   };
 
   // ACTUAL EmailJS implementation - this will send real emails
   const sendEmail = async (templateParams) => {
     return await emailjs.send(
-      "service_kqud42r",   // Your EmailJS service ID
-      "template_almdhew",  // Your EmailJS template ID
+      "service_kqud42r", // Your EmailJS service ID
+      "template_almdhew", // Your EmailJS template ID
       templateParams,
-      "bF7VpbbrJ3u9MayGO"    // Your EmailJS public key
+      "bF7VpbbrJ3u9MayGO" // Your EmailJS public key
     );
   };
 
@@ -66,14 +66,20 @@ const ContactSection = () => {
 
     try {
       // Validate form fields
-      if (!formState.first_name || !formState.last_name || !formState.user_email || !formState.subject || !formState.message) {
-        throw new Error('Please fill in all fields');
+      if (
+        !formState.first_name ||
+        !formState.last_name ||
+        !formState.user_email ||
+        !formState.subject ||
+        !formState.message
+      ) {
+        throw new Error("Please fill in all fields");
       }
 
       // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(formState.user_email)) {
-        throw new Error('Please enter a valid email address');
+        throw new Error("Please enter a valid email address");
       }
 
       const templateParams = {
@@ -85,11 +91,11 @@ const ContactSection = () => {
         // Add additional fields that might be useful
         to_name: "Iben Anoos", // Your name
         reply_to: formState.user_email,
-        from_name: `${formState.first_name} ${formState.last_name}`
+        from_name: `${formState.first_name} ${formState.last_name}`,
       };
 
       const response = await sendEmail(templateParams);
-      console.log('Email sent successfully:', response);
+      console.log("Email sent successfully:", response);
 
       // Reset form on success
       setFormState({
@@ -100,36 +106,42 @@ const ContactSection = () => {
         message: "",
       });
 
-      showPopup('success', 'Message sent successfully! Thank you for reaching out. I\'ll get back to you soon.');
-
+      showPopup(
+        "success",
+        "Message sent successfully! Thank you for reaching out. I'll get back to you soon."
+      );
     } catch (error) {
       console.error("Error sending message:", error);
-      
+
       // Handle specific EmailJS errors
-      let errorMessage = 'Failed to send message. Please try again.';
-      
+      let errorMessage = "Failed to send message. Please try again.";
+
       if (error.text) {
         errorMessage = `Error: ${error.text}`;
       } else if (error.status) {
         switch (error.status) {
           case 400:
-            errorMessage = 'Bad request. Please check your information and try again.';
+            errorMessage =
+              "Bad request. Please check your information and try again.";
             break;
           case 401:
-            errorMessage = 'Unauthorized. Please contact the site administrator.';
+            errorMessage =
+              "Unauthorized. Please contact the site administrator.";
             break;
           case 402:
-            errorMessage = 'Email service limit reached. Please try again later.';
+            errorMessage =
+              "Email service limit reached. Please try again later.";
             break;
           case 404:
-            errorMessage = 'Service not found. Please contact the site administrator.';
+            errorMessage =
+              "Service not found. Please contact the site administrator.";
             break;
           default:
             errorMessage = `Service error (${error.status}). Please try again later.`;
         }
       }
-      
-      showPopup('error', errorMessage);
+
+      showPopup("error", errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -187,7 +199,7 @@ const ContactSection = () => {
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-300">
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
-                {popup.type === 'success' ? (
+                {popup.type === "success" ? (
                   <div className="p-2 bg-green-100 dark:bg-green-900 rounded-full">
                     <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
                   </div>
@@ -198,7 +210,7 @@ const ContactSection = () => {
                 )}
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">
-                    {popup.type === 'success' ? 'Success!' : 'Error'}
+                    {popup.type === "success" ? "Success!" : "Error"}
                   </h3>
                 </div>
               </div>
@@ -215,7 +227,7 @@ const ContactSection = () => {
             <Button
               onClick={hidePopup}
               className="w-full"
-              variant={popup.type === 'success' ? 'default' : 'destructive'}
+              variant={popup.type === "success" ? "default" : "destructive"}
             >
               Close
             </Button>
@@ -244,7 +256,10 @@ const ContactSection = () => {
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
-                    <Label htmlFor="first_name" className="text-foreground font-medium">
+                    <Label
+                      htmlFor="first_name"
+                      className="text-foreground font-medium"
+                    >
                       First Name *
                     </Label>
                     <Input
@@ -257,7 +272,10 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <Label htmlFor="last_name" className="text-foreground font-medium">
+                    <Label
+                      htmlFor="last_name"
+                      className="text-foreground font-medium"
+                    >
                       Last Name *
                     </Label>
                     <Input
@@ -271,7 +289,10 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <Label htmlFor="user_email" className="text-foreground font-medium">
+                  <Label
+                    htmlFor="user_email"
+                    className="text-foreground font-medium"
+                  >
                     Email *
                   </Label>
                   <Input
@@ -285,7 +306,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="space-y-3">
-                  <Label htmlFor="subject" className="text-foreground font-medium">
+                  <Label
+                    htmlFor="subject"
+                    className="text-foreground font-medium"
+                  >
                     Subject *
                   </Label>
                   <Input
@@ -298,7 +322,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="space-y-3">
-                  <Label htmlFor="message" className="text-foreground font-medium">
+                  <Label
+                    htmlFor="message"
+                    className="text-foreground font-medium"
+                  >
                     Message *
                   </Label>
                   <Textarea

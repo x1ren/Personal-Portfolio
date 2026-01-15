@@ -14,6 +14,18 @@ const ResumeSection = () => {
     },
   ];
 
+  const experience = [
+    {
+      role: "Freelance Full-Stack Developer",
+      company: "BrandingHeaven",
+      location: "Remote",
+      period: "3-month freelance contract",
+      description:
+        "Developed a complete web experience using Next.js and Three.js, including secure user authentication and Stripe-powered payments from end to end.",
+      technologies: ["Next.js", "Three.js", "Stripe", "User Authentication"],
+    },
+  ];
+
   const professionalAttributes = [
     {
       category: "Leadership And Collaboration",
@@ -23,11 +35,9 @@ const ResumeSection = () => {
         "Clear Communication",
         "Strong Work Ethic",
         "Adaptability",
-         "Problem Solving",
+        "Problem Solving",
       ],
     },
-    
-      
   ];
 
   return (
@@ -41,20 +51,65 @@ const ResumeSection = () => {
             My professional journey and technical expertise in software
             development.
           </p>
-          <a download={true} href="/Iben Anoos CV.pdf">
-          <Button
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-modern font-medium px-8"
-          >
-            <Download className="w-5 h-5 mr-3" />
-            Download Full Resume
-          </Button>
+          <a download={true} href="/IbenAnoos CV.pdf">
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-modern font-medium px-8"
+            >
+              <Download className="w-5 h-5 mr-3" />
+              Download Full Resume
+            </Button>
           </a>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Experience & Education */}
           <div className="space-y-16">
+            <div>
+              <h3 className="text-3xl font-black text-primary mb-8 tracking-tight">
+                Work Experience
+              </h3>
+              <div className="space-y-8">
+                {experience.map((exp, index) => (
+                  <div key={index} className="glass-card rounded-2xl p-8">
+                    <h4 className="text-2xl font-bold text-primary mb-2">
+                      {exp.role}
+                    </h4>
+                    <div className="space-y-3 mb-4">
+                      <div className="text-hero-accent text-lg font-semibold">
+                        {exp.company}
+                      </div>
+                      <div className="flex items-center gap-6 text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span className="font-medium">{exp.period}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          <span className="font-medium">{exp.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed font-light mb-4">
+                      {exp.description}
+                    </p>
+                    {exp.technologies && (
+                      <div className="flex flex-wrap gap-2">
+                        {exp.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-4 py-2 text-xs bg-secondary/50 text-secondary-foreground rounded-lg border border-border font-medium"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div>
               <h3 className="text-3xl font-black text-primary mb-8 tracking-tight">
                 Education
